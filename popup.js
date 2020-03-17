@@ -7,7 +7,7 @@ function startTimer() {
   if (isWashingHands) {
     return;
   }
-
+  washBTN.style.display = 'none';
   isWashingHands = true;
 
   const time = setInterval(() => {
@@ -16,6 +16,8 @@ function startTimer() {
       clearInterval(time);
       document.getElementById('sound').play();
       seconds = 20;
+      washBTN.style.display = 'block';
+      isWashingHands = false;
     }
     secondEl.innerText = 'Seconds Left: ' + seconds;
   }, 1000);
