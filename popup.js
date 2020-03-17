@@ -17,7 +17,7 @@ function startTimer() {
       document.getElementById('sound').play();
       seconds = 20;
     }
-    secondEl.innerText = 'Seconds Left ' + seconds;
+    secondEl.innerText = 'Seconds Left: ' + seconds;
   }, 1000);
 }
 
